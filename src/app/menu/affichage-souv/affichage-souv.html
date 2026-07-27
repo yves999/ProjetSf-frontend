@@ -1,0 +1,65 @@
+<h1 align="center"><u>Affichage des souverains de France</u></h1>
+
+<br>
+<br>
+<br>
+<br>
+
+<div align="center">
+
+    <form [formGroup]="souvForm">       
+                    
+                    <label><B>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+                        Choisir un souverain (*)</B></label>                
+                    &nbsp;
+                    <select formControlName="souvSelect" id="souvSelect" (change)="getSelectedSouv($event) ">
+                            
+                            <option  selected disabled value="" >Faites votre sélection</option> 
+                                                    
+                            <option *ngFor="let souv of liste" [value]="souv.id">{{souv.nom}} {{souv.prenom}}</option>
+                 
+                    </select>
+    </form>  
+
+     <table border = 0 width= '1400'>
+          <tr>
+             <td width= '1200' >&nbsp;</td>
+             <td width= '200'>  <h4><B>(*): Champ obligatoire</B></h4>  </td>
+          </tr>    
+    </table>
+    <br>
+    <br>
+    <br>
+
+       <button type="submit" class="bouton" (click)="onAnnuler()">Annuler</button> 
+        
+       <button type="button" class="bouton" (click)="onGo()"> Affichage du souverain sélectionné</button>
+
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div align="left">
+             
+              <button routerLink="/menu" class="bouton">Retour</button>
+              
+ </div>
+
+
+
+
+
+
+<!-- <p>affichage-souv works!</p> -->

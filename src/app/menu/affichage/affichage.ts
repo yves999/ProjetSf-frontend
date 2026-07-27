@@ -33,7 +33,7 @@ export class Affichage implements OnInit {
       .subscribe(data => {
         this.liste = data;     
         this.cdr.detectChanges();   
-        console.log ('this.liste: ' , this.liste)         
+        console.log ('this.listeAffichage: ' , this.liste)         
       });
       
   }
