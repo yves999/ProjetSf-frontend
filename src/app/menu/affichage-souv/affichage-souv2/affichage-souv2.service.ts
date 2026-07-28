@@ -12,9 +12,9 @@ export class AffichageSouv2Service {
 
   getSouv(idSouv: any): Observable<any[]> {
 
-      const apiUrl = 'https://projet-sf-backend.vercel.app/menu/affichage-souv/affichage-souv2/${idSouv}';
+      // const apiUrl = 'https://projet-sf-backend.vercel.app/menu/affichage-souv/affichage-souv2/${idSouv}';
 
-      // const apiUrl = `http://localhost:3000/menu/affichage-souv/affichage-souv2/${idSouv}`;
+      const apiUrl = `http://localhost:3000/menu/affichage-souv/affichage-souv2/${idSouv}`;
 
       // const apiUrl = `http://localhost:3000/menu/affichage-souv2/${idSouv}`;
 
