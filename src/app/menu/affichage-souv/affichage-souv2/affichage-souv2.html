@@ -1,58 +1,60 @@
 <h1 align="center" *ngIf="souv"><u>
-  Affichage de {{souv.prenom}} {{souv.nom}}</u>
+  Affichage de {{souv.nom}} {{souv.prenom}}</u>
 </h1>
 
-
-
 <br>
 <br>
 
-<!-- 
-<h2 style = "color:blue">Tournois du Grand chelem</h2>
-   
-                    <ul>
-                         <li>Melbourne: {{ joueur.mel }} </li>
-                         <li>Roland Garros: {{ joueur.rog }} </li>
-                         <li>Wimbledom: {{ joueur.wim }} </li>
-                         <li>US open: {{ joueur.uso }} </li>        
-                    </ul> 
+<h2 style = "color:blue">Description de sa vie</h2>
 
+  <div class=text-center>  
 
-
-<h2 style = "color:blue">Master</h2>
-   
-                    <ul>
-                         <li>Master: {{ joueur.master }} </li>                            
-                    </ul> 
-
-<h2 style = "color:blue">Coupe Davis</h2>
-   
-                    <ul>
-                         <li>Coupe Davis: {{ joueur.cpa }} </li>                            
-                    </ul> 
-
-<h2 style = "color:blue">Jeux olympiques</h2>
-   
-                    <ul>
-                         <li>Jeux olympiques: {{ joueur.jo }} </li>                            
-                    </ul> 
-
-<h2 style = "color:blue">Nombre de tournois gagnés</h2>
-   
-                    <ul>
-                         <li>Nombre de tournois gagnés: {{ joueur.nbtg }} </li>                            
-                    -->
-
-
-
+                 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;         
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de naissance :</B></label>           
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+                {{souv.date_naissance | date: "dd/MM/yyyy"}}
+                <br> 
+                <br>  
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;             
+                <label><B>&nbsp; &nbsp; Date de décés :</B></label>           
+                 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 {{souv.date_mort | date: "dd/MM/yyyy"}}               
+                <br> 
+                <br>  
+                 &nbsp;             
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de début de règne :</B></label>           
+                &nbsp; &nbsp; &nbsp; 
+                {{souv.date_debut_regne | date: "dd/MM/yyyy"}}              
+                <br> 
+                <br>  
+                 &nbsp;&nbsp; &nbsp; &nbsp;             
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de fin de règne :</B></label>           
+                &nbsp; &nbsp; &nbsp; 
+                {{souv.date_fin_regne | date: "dd/MM/yyyy"}}  
+                <br> 
+                <br> 
+                <br> 
+                <br> 
+                
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                
+                    <!-- <label ><B>&nbsp; &nbsp; &nbsp; &nbsp; Les faits marquants</B></label>    
+                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    -->
+                      <label style="vertical-align: top">
+                  
+                         <B>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                            Les faits marquants :</B>
+                      </label>   
+                      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                      {{souv.faits_marquants}}   
+                   <br>     
+       </div>               
 
 <br>
 <br>
 <br>
 <br>
-
-
-
 
 <div align="left">
              

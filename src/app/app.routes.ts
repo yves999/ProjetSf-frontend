@@ -6,6 +6,7 @@ import { Menu } from './menu/menu';
 import { Affichage } from './menu/affichage/affichage';
 import { AffichageSouv } from './menu/affichage-souv/affichage-souv';
 import { AffichageSouv2 } from './menu/affichage-souv/affichage-souv2/affichage-souv2';
+import { GestionSouv } from './menu/gestion-souv/gestion-souv';
 
 export const routes: Routes = [
   
@@ -13,7 +14,8 @@ export const routes: Routes = [
    { path: 'menu', component: Menu },
    { path: 'affichage', component: Affichage },
    { path: 'affichage-souv', component: AffichageSouv },
-   { path: 'affichage-souv2', component: AffichageSouv2 }
+   { path: 'affichage-souv2', component: AffichageSouv2 },
+   { path: 'gestion-souv', component: GestionSouv }
    
 
 ];

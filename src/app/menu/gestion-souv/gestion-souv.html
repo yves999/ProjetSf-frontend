@@ -1,0 +1,165 @@
+  <div align="center">            
+            <h1><u>Gestion des souverains de France</u></h1>
+            <br>
+            <br>
+            <br>    
+  </div>
+
+<br>
+<br>
+<!-- <br>
+<br> -->
+
+<div align="center">
+
+    <form [formGroup]="souvForm">       
+                    
+                    <label><B>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+                        Choisir un souverain </B></label>                
+                    &nbsp;
+                    <select formControlName="souvSelect" id="souvSelect" (change)="getSelectedSouv($event) ">
+                            
+                            <option  selected disabled value="" >Faites votre sélection</option> 
+                                                    
+                            <option *ngFor="let souv of liste" [value]="souv.id">{{souv.nom}} {{souv.prenom}}</option>
+                 
+                    </select>
+
+        <br>
+        <br>
+        <br>
+    
+       <div class=text-center>  
+
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;            
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Nom (*)</B></label>           
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" formControlName="selectedNom" placeholder="Nom (*)" >
+                <br> 
+                <br>  
+                 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;             
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Prénom (*)</B></label>           
+                 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                <input type="text" formControlName="selectedPrenom" placeholder="Prénom (*)" >
+       </div>
+
+   
+      <br> 
+      <br>  
+
+       <div class=text-center>  
+
+                 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;         
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de naissance</B></label>           
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" formControlName="selectedDate_naissance" placeholder="date_naissance" >
+                <br> 
+                <br>  
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;             
+                <label><B>&nbsp; &nbsp; Date de décés</B></label>           
+                 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" formControlName="selectedDate_mort" placeholder="date_mort" >
+                <br> 
+                <br>  
+                  &nbsp;             
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de début de règne</B></label>           
+                &nbsp; &nbsp; &nbsp; 
+                <input type="date" formControlName="selectedDate_debut_regne" placeholder="date_debut_regne" >
+                <br> 
+                <br>  
+                 &nbsp;&nbsp; &nbsp; &nbsp;             
+                <label><B>&nbsp; &nbsp; &nbsp; &nbsp; Date de fin de règne</B></label>           
+                &nbsp; &nbsp; &nbsp; 
+                <input type="date" formControlName="selectedDate_fin_regne" placeholder="date_fin_regne" >
+                <br> 
+                <br> 
+                <br> 
+                <br> 
+                
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;;&nbsp;&nbsp;      
+                
+                    <!-- <label ><B>&nbsp; &nbsp; &nbsp; &nbsp; Les faits marquants</B></label>    
+                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    -->
+                      <label style="vertical-align: top">
+                  
+                         <B>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                            
+                            
+                            Les faits marquants</B>
+                      </label>   
+                      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         
+                    <textarea  formControlName="selectedFaits_marquants" placeholder="faits_marquants" rows=8 cols=80 >
+                    </textarea>
+                   <br>      
+                 
+       </div>
+
+       
+   
+
+
+       <table border = 0 width= '1400'>
+                <tr>
+                    <td width= '1200' >&nbsp;</td>
+                    <td width= '200'>  <h4><B>(*): Champ obligatoire</B></h4>  </td>
+                </tr>    
+       </table>
+       <br>
+       <br>
+       <br>
+
+        <button type="submit" class="bouton" (click)="onSuppression()">Suppression</button> 
+        
+        <button type="submit" class="bouton" (click)="onModification()">Modification</button>         
+
+        <button type="submit" class="bouton" (click)="onCreation()">Création</button> 
+        
+        <button type="submit" class="bouton" (click)="onAnnuler()">Annuler</button> 
+
+        <button routerLink="/menu" class="bouton" >Retour</button> 
+
+     </form>     
+
+</div>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>gestion-jt works!</p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>gestion-souv works!</p> -->
