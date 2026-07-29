@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 
 export class GestionSouvService {
 
-    private apiUrl = 'http://localhost:3000/menu/gestion-souv';
+    // private apiUrl = 'http://localhost:3000/menu/gestion-souv';
 
-    //  private apiUrl = 'https://projet-sf-backend.vercel.app/menu/gestion-souv';
+     private apiUrl = 'https://projet-sf-backend.vercel.app/menu/gestion-souv';
 
     constructor(private http: HttpClient) {}
 
@@ -21,9 +21,9 @@ export class GestionSouvService {
 
     getGestionSouv2(idSouv: any): Observable<any[]> {
 
-       const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
+      //  const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
 
-      //  const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
+       const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
 
        return this.http.get<any[]>(apiUrl2);
     }
@@ -35,9 +35,9 @@ export class GestionSouvService {
 
     modifierSouv(idSouv: any, data: any): Observable<any> {
 
-        const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
+        // const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
 
-          // const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
+          const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
 
         console.log ("modifierSouv_data: ", data)
 
@@ -46,9 +46,9 @@ export class GestionSouvService {
 
     supprimerSouv(idSouv: any): Observable<any> {
 
-          const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
+          // const apiUrl2 = `http://localhost:3000/menu/gestion-souv/${idSouv}`;
 
-      //  const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
+       const apiUrl2 = `https://projet-sf-backend.vercel.app/menu/gestion-souv/${idSouv}`;
 
 
           console.log ("supprimerSouv_id: ", idSouv)
